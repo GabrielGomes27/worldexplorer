@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌎 WorldExplorer
 
-## Getting Started
+Portal web para consulta de informações sobre países do mundo, desenvolvido como parte da disciplina Programação e Design para Web III.
 
-First, run the development server:
+📌 Sobre o projeto
 
-```bash
+O WorldExplorer permite pesquisar países e visualizar informações como:
+
+Nome oficial
+
+Capital
+
+População
+
+Bandeira em emoji e imagem SVG
+
+Região
+
+Sub-região
+
+Idiomas
+
+Moedas
+
+Fusos horários
+
+🛠️ Tecnologias utilizadas
+
+Next.js 14
+
+TypeScript
+
+React
+
+App Router
+
+CSS
+
+API de países
+
+📁 Estrutura do projeto
+worldexplorer/
+├── app/
+│   ├── pais/
+│   │   └── [name]/
+│   │       └── page.tsx
+│   ├── sobre/
+│   │   └── page.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── components/
+│   ├── CountryCard.tsx
+│   └── SearchBar.tsx
+│
+├── .env.local
+├── .gitignore
+├── package.json
+└── README.md
+
+⚙️ Configuração
+
+Crie um arquivo .env.local na raiz do projeto com:
+
+NEXT_PUBLIC_API_URL=https://countries.dev
+
+
+O arquivo .env.local está configurado no .gitignore e não deve ser enviado ao GitHub.
+
+🚀 Como executar localmente
+
+Instale as dependências:
+
+npm install
+
+
+Execute o projeto:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Depois, acesse:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+🔎 Como utilizar
 
-To learn more about Next.js, take a look at the following resources:
+Na página inicial, digite o nome de um país no campo de busca e clique em Buscar.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Após encontrar o país, clique em Ver detalhes para acessar informações adicionais.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🌐 Rotas
 
-## Deploy on Vercel
+/ — Página principal com busca de países.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+/pais/[name] — Página de detalhes de um país.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+/sobre — Informações sobre o projeto e o aluno.
+
+🎓 Informações acadêmicas
+
+Projeto desenvolvido para a disciplina Programação e Design para Web III, do curso de Tecnologia em Análise e Desenvolvimento de Sistemas.
+
+📚 Objetivo
+
+O objetivo do projeto é demonstrar a utilização do Next.js 14 com App Router, componentes reutilizáveis, rotas dinâmicas, consumo de API e organização de uma aplicação web.
